@@ -10,7 +10,7 @@ pipeline{
         stage('build')
        { 
         steps{
-            sh 'python 1.py'
+             sh 'python 1.py'
         }
       }
         
