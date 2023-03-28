@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('clone')
+        stage('clonee')
         {
             steps{
                 git  url: 'https://github.com/Rupali1520/secrepo.git'
