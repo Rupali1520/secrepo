@@ -11,8 +11,7 @@ jobs:
       run: |
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
       if: runner.os == 'Linux'
-    - name: Print Secret Value
-      run: echo ${{ secrets.AZURE_CREDENTIALS }}
+
 
 
     - uses: azure/login@v1
