@@ -7,7 +7,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
+    - name: Install Azure CLI
+      run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      if: runner.os == 'Linux'
+
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
