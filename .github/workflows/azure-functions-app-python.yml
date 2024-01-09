@@ -14,6 +14,7 @@ jobs:
     - name: Print Secret Value
       run: echo ${{ secrets.AZURE_CREDENTIALS }}
 
+
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
