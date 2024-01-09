@@ -12,7 +12,9 @@ jobs:
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
       if: runner.os == 'Linux'
 
-
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - uses: Azure/login@v1
       with:
